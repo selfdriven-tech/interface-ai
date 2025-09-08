@@ -1,0 +1,14 @@
+{
+	"settings": "selfdriven-lab",
+	"service": "openai",
+	"controller": "ai-gen-util-vector-store-attach-file",
+	"notes": [
+		"attach uploaded file to vector store."
+	],
+	"vectorstore": {
+		"id": "vs_685b9a1d57d48191adba6f7b6e019e99"
+	},
+	"file": {
+		"id": "file-PBUfbGMWoLEds21MqHfJMH"
+	}
+}

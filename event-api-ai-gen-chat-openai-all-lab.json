@@ -1,0 +1,24 @@
+{
+	"body": {
+		"method": "ai-gen-chat",
+		"data": {
+			"_context": "selfdriven-lab",
+			"service": "openai",
+			"messages": {
+				"all": [
+					{
+						"role": "system",
+						"content": "You are a learning assistant."
+					},
+					{
+						"role": "user",
+						"content": "I'm Bored"
+					}
+				]
+			}
+		},
+		"check": "false"
+	},
+	"queryStringParameters": {},
+	"headers": {}
+}

@@ -1,0 +1,8 @@
+{
+	"settings": "selfdriven-lab",
+	"service": "openai",
+	"controller": "ai-gen-util-thread-create",
+	"notes": [
+		"create a thread for use with an assistant -- assistant is linked at time of chat based on thread."
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"settings": "selfdriven-lab",
+	"service": "openai",
+	"controller": "ai-gen-util-thread-chat",
+	"notes": [
+		"chat using thread and link to assistant - which may be pre-linked to a vector-store."
+	],
+	"thread":
+	{
+		"id": "thread_yX2bMq1IhyZNdEJ5nUYbP2nK"
+	},
+	"assistant":
+	{
+		"id": "asst_bM8EgHOcjlO4zWWWMUauCD4F"
+	},
+	"message":
+	{
+		"role": "user",
+		"content": "I'm a teacher - quick whitepaper summary"
+	}
+}

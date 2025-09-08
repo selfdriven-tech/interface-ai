@@ -1,0 +1,12 @@
+{
+	"settings": "selfdriven-lab",
+	"service": "openai",
+	"controller": "ai-gen-util-vector-store-create",
+	"notes": [
+		"create a vector store for loading files."
+	],
+	"vectorstore": {
+		"name": "vs-lab-sf-whitepaper",
+		"description": "selfdriven Whitepaper"
+	}
+}

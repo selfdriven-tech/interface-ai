@@ -1,0 +1,249 @@
+{
+	"entityos": {
+		"hostname": "api.entityos.cloud",
+		"logon": "",
+		"password": "",
+		"email": "",
+		"testing": {
+			"status": "true",
+			"showData": "true",
+			"break": "-"
+		},
+		"convert": "true"
+	},
+	"ai": {
+		"services": [
+			{
+				"name": "openai",
+				"note": "Using selfdriven openapi key and OpenAI SDK",
+				"models": [
+					{
+						"name": "gpt-5-nano",
+						"default": true
+					},
+					{
+						"name": "gpt-5-mini"
+					},
+					{
+						"name": "gpt-5"
+					},
+					{
+						"name": "gpt-4.1-mini"
+					},
+					{
+						"name": "gpt-4o-mini"
+					},
+					{
+						"name": "gpt-4o"
+					}
+				],
+				"namespace": "ai.gen.util.openai-1.0.3",
+				"keypath": "ai.keys.openai",
+				"default": true
+			},
+			{
+				"name": "xai",
+				"note": "Using selfdriven xai api key and OpenAI SDK",
+				"models": [
+					{
+						"name": "grok-4-latest",
+						"default": true
+					},
+					{
+						"name": "grok-3-mini"
+					},
+					{
+						"name": "grok-3"
+					},
+					{
+						"name": "grok-3-mini-fast"
+					},
+					{
+						"name": "grok-3-fast"
+					},
+					{
+						"name": "grok-2-vision-1212"
+					}
+				],
+				"namespace": "ai.gen.util.xai-1.0.0",
+				"keypath": "ai.keys.xai",
+				"host": {
+					"name": "api.x.ai",
+					"basePath": "/v1",
+					"path": "/v1/chat/completions"
+				}
+			},
+			{
+				"name": "google",
+				"note": "Using AI Studio key & Google SDK",
+				"models": [
+					{
+						"name": "gemini-2.0-flash",
+						"default": true
+					},
+					{
+						"name": "gemini-pro-vision"
+					}
+				],
+				"namespace": "ai.gen.util.google-1.0.0",
+				"keypath": "ai.keys.google"
+			},
+			{
+				"name": "mistral",
+				"note": "Using selfdriven-lab Mistral key",
+				"models": [
+					{
+						"name": "open-mistral-7b",
+						"default": true
+					}
+				],
+				"namespace": "ai.gen.util.mistral-1.0.0",
+				"host": {
+					"name": "api.mistral.ai",
+					"path": "/v1/chat/completions"
+				},
+				"keypath": "ai.keys.mistral"
+			},
+			{
+				"name": "groq",
+				"note": "Using selfdriven-lab Groq Cloud key",
+				"models": [
+					{
+						"name": "mixtral-8x7b-32768",
+						"default": true
+					},
+					{
+						"name": "llama3-70b-8192"
+					}
+				],
+				"namespaces": [],
+				"host": {
+					"name": "api.groq.com",
+					"path": "/openai/v1/chat/completions"
+				},
+				"keypath": "ai.keys.groq"
+			},
+			{
+				"name": "claude",
+				"note": "Using selfdriven-lab Claude Cloud key",
+				"models": [
+					{
+						"name": "claude-3-7-sonnet-20250219",
+						"default": true
+					},
+					{
+						"name": "claude-3-haiku-20240307"
+					},
+					{
+						"name": "claude-sonnet-4-20250514"
+					}
+				],
+				"namespaces": [],
+				"host": {
+					"name": "api.anthropic.com",
+					"path": "/v1/messages"
+				},
+				"headers": {
+					"anthropic-version": "2023-06-01"
+				},
+				"keypath": "ai.keys.claude",
+				"defaults": {
+					"maxtokens": 1024
+				}
+			}
+		],
+		"usage": {
+			"rules": [
+				{
+					"type": "per-chat",
+					"token": "octoproto",
+					"cost": "1",
+					"note": "Introductory offer"
+				},
+				{
+					"type": "unlimited",
+					"token": "sdf",
+					"have": "1000",
+					"note": "Introductory offer"
+				},
+				{
+					"type": "unlimited",
+					"token": "sdi",
+					"have": "1",
+					"note": "Introductory offer"
+				}
+			]
+		},
+		"defaults": {
+			"namespace": "ai.gen.util-1.0.0",
+			"maxtokens": 1000,
+			"temperature": 0.7,
+			"messages": {
+				"system": "You are an learning and organisational assistant."
+			}
+		}
+	},
+	"infrastructure": {
+		"aws": {
+			"access": {
+				"id": "",
+				"secret": ""
+			}
+		}
+	},
+	"rules": [
+		{
+			"set": "ai.keys.openai",
+			"value": "sk-..."
+		},
+		{
+			"set": "ai.keys.xai",
+			"value": "xai-..."
+		},
+		{
+			"set": "ai.keys.google",
+			"value": "AI..."
+		},
+		{
+			"set": "ai.keys.mistral",
+			"value": "..."
+		},
+		{
+			"set": "ai.keys.groq",
+			"value": "gsk_..."
+		},
+		{
+			"set": "ai.keys.claude",
+			"value": "sk-ant-..."
+		},
+		{
+			"set": "ai.keys.huggingface",
+			"value": "hf_..."
+		},
+		{
+			"set": "ai.keys.asi",
+			"value": "sk_..."
+		},
+		{
+			"set": "ai.keys.openrouter",
+			"value": "sk-or-v1-..."
+		},
+		{
+			"set": "ai.keys.togetherai",
+			"value": "..."
+		},
+		{
+			"set": "ai.keys.friendliai",
+			"value": "flp_..."
+		},
+		{
+			"set": "infrastructure.aws.access.id",
+			"default": "AKIA..."
+		},
+		{
+			"set": "infrastructure.aws.access.secret",
+			"default": "prompt",
+			"_default": "..."
+		}
+	]
+}

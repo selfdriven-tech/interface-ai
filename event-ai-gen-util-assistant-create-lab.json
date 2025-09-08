@@ -1,0 +1,16 @@
+{
+	"settings": "selfdriven-lab",
+	"service": "openai",
+	"controller": "ai-gen-util-assistant-create",
+	"notes": [
+		"create an assistant linked to a vector-store."
+	],
+	"vectorstore": {
+		"id": "vs_685b9a1d57d48191adba6f7b6e019e99"
+	},
+	"assistant":
+	{
+		"name": "assistant-lab-sf-whitepaper",
+		"instructions": "You are an assistant for people interested in understanding the selfdriven-whitepaper.pdf"
+	}
+}

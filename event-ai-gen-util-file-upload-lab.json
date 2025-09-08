@@ -1,0 +1,12 @@
+{
+	"settings": "selfdriven-lab",
+	"service": "openai",
+	"controller": "ai-gen-util-file-upload",
+	"notes": [
+		"upload file to service."
+	],
+	"file": {
+		"name": "selfdriven-whitepaper.pdf",
+		"path": "data/selfdriven-foundation"
+	}
+}
